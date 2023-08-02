@@ -12,9 +12,11 @@ print(df.values)
 
 dfs = pd.read_csv(df.shape)
 dfd = df.describe()
-dfv = df.values
+dfv = pd.read_csv(df.values)
 
 dfd.to_csv("analyse.csv")
+dfs.to_csv("analyse.csv")
+dfv.to_csv("analyse.csv")
 
 with open("analyse1.csv", "w") as file:
     writer = csv.writer(file)
